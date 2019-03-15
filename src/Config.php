@@ -2,15 +2,19 @@
 
 declare(strict_types=1);
 
-namespace MyComponent;
+namespace Keboola\AppEndOfLife;
 
 use Keboola\Component\Config\BaseConfig;
 
 class Config extends BaseConfig
 {
-    // @todo implement your custom getters
-    public function getFoo(): string
+    public function getEolMessage(): string
     {
-        return $this->getValue(['parameters', 'foo']);
+        $imageParams = $this->getImageParameters();
+        if (!empty($imageParams['eolMessage'])) {
+            return $imageParams['eolMessage'];
+        } else {
+            return 'This component has reached end of life and cannot be run any more.';
+        }
     }
 }
