@@ -2,15 +2,18 @@
 
 declare(strict_types=1);
 
-namespace MyComponent;
+namespace Keboola\AppEndOfLife;
 
 use Keboola\Component\BaseComponent;
+use Keboola\Component\UserException;
 
 class Component extends BaseComponent
 {
     public function run(): void
     {
-        // @TODO implement
+        /** @var Config $config */
+        $config = $this->getConfig();
+        throw new UserException($config->getEolMessage());
     }
 
     protected function getConfigClass(): string

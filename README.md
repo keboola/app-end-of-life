@@ -1,12 +1,24 @@
-# my-component
+# End of life application
 
-[![Build Status](https://travis-ci.com/keboola/my-component.svg?branch=master)](https://travis-ci.com/keboola/my-component)
+[![Build Status](https://travis-ci.com/keboola/app-end-of-life.svg?branch=master)](https://travis-ci.com/keboola/app-end-of-life)
 
-> Fill in description
+This component is used as a placeholder when a component reached its end of life and cannot be run anymore.
 
 # Usage
 
-> fill in usage instructions
+In [developer portal](https://components.keboola.com/~) edit the component which reached its end-of-life. 
+Edit the component and in repository details set:
+
+- **Image Name** to `147946154733.dkr.ecr.us-east-1.amazonaws.com/developer-portal-v2/keboola.app-end-of-life`
+- **Tag** to `latest` 
+
+Optionally, you can specify a custom `eolMessage` in **Image parameters**:
+
+```json
+{
+    "eolMessage": "The 24h Acme Anvil Service has been terminated. For other options of catching the Road Runner, contact Wile E. Coyote."
+}
+```
 
 ## Development
  

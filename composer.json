@@ -1,7 +1,7 @@
 {
     "require": {
-        "php": "^7.1",
-        "keboola/php-component": "^5.0"
+        "php": "^7.3",
+        "keboola/php-component": "^6.0"
     },
     "require-dev": {
         "jakub-onderka/php-parallel-lint": "^1.0",
@@ -14,20 +14,17 @@
     },
     "autoload": {
         "psr-4": {
-            "MyComponent\\": "src/"
+            "Keboola\\AppEndOfLife\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "MyComponent\\Tests\\": "tests/phpunit/",
-            "MyComponent\\FunctionalTests\\": "tests/functional/"
+            "Keboola\\AppEndOfLife\\FunctionalTests\\": "tests/functional/"
         }
     },
     "scripts": {
-        "tests-phpunit": "phpunit",
         "tests-datadir": "phpunit tests/functional",
         "tests": [
-            "@tests-phpunit",
             "@tests-datadir"
         ],
 
