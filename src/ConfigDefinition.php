@@ -12,6 +12,7 @@ class ConfigDefinition extends BaseConfigDefinition
     protected function getParametersDefinition(): ArrayNodeDefinition
     {
         $parametersNode = parent::getParametersDefinition();
+        $parametersNode->ignoreExtraKeys(true);
         return $parametersNode;
     }
 }
